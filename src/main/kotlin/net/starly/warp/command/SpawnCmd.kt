@@ -17,8 +17,7 @@ class SpawnCmd: CommandExecutor {
         var player: Player = sender as Player
         var warpData: WarpData = WarpData(player)
 
-        if(!(sender is Player)) {
-        }
+        if (sender !is Player) return true
 
             if(args.isEmpty()) {
 
@@ -46,7 +45,7 @@ class SetSpawnCmd : CommandExecutor {
         var player: Player = sender as Player
         var warpData: WarpData = WarpData(player)
 
-        if(sender is Player) {
+        if (sender !is Player) return true
 
             if(args.isEmpty()) {
 

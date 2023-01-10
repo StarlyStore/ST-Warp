@@ -21,7 +21,7 @@ class WarpCmd : CommandExecutor {
         var player: Player = sender as Player
         var warpData: WarpData = WarpData(player)
 
-        if (sender is Player) {
+        if (sender !is Player) return true
 
             if (args.isEmpty()) {
                 for(list: String in Translate.color(config!!.getStringList("messages.warp.main"))) {
@@ -174,7 +174,6 @@ class WarpCmd : CommandExecutor {
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.notExistCommand"))))
                 }
             }
-        }
         return false;
     }
 }

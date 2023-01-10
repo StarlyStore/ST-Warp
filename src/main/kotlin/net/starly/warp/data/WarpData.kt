@@ -5,10 +5,7 @@ import net.starly.core.data.Config
 import org.bukkit.Location
 import org.bukkit.entity.Player
 
-class WarpData(player: Player) {
-
-
-    var player: Player = player
+class WarpData(private var player: Player) {
 
 
     /**
