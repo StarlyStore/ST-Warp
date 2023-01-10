@@ -57,7 +57,6 @@ class SetSpawnCmd : CommandExecutor {
                 warpData.setSpawnLocation()
                 player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("messages.spawn.set"))))
             }
-        }
         return false;
     }
 }
