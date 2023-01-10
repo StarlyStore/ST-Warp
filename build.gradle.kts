@@ -10,7 +10,7 @@ version = "1.0.0"
 repositories {
     mavenCentral()
     maven {
-        url = uri("http://idkNicks.xyz:8081/repository/maven-public/")
+        url = uri("http://feather-s.kr:8083/repository/maven-public/")
         isAllowInsecureProtocol = true
     }
 }
@@ -18,10 +18,10 @@ repositories {
 dependencies {
 
     /** CORE */
-    compileOnly("com.github:nicklib:1.5.0")
+    compileOnly("net.starly.core:ST-Core:1.4.5")
 
     /** BUKKIT API */
-    compileOnly("org.bukkit.spigotmc:spigot-api:1.19.2-R0.1")
+    compileOnly("org.spigotmc:spigot-api:R0.1:1.16.5")
 
     /** OTHERS */
     implementation("org.jetbrains:annotations:23.0.0")
@@ -70,7 +70,7 @@ tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
         copy {
             val sep = File.separator
             from("${buildDir.absolutePath}${sep}libs$sep${project.name}.jar")
-            into("C:\\Users\\Yangd\\대영\\마인크래프트\\서버\\마인크래프트\\개발용\\1.19.2\\plugins")
+            into("C:\\Users\\Yangd\\대영\\마인크래프트\\서버\\마인크래프트\\개발용\\스탈리\\plugins")
         }
     }
 }

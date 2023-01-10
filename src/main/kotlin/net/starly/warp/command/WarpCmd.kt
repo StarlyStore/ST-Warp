@@ -1,17 +1,17 @@
-package io.github.idknicks.warp.command
+package net.starly.warp.command
 
-import com.github.nicklib.data.Config
-import com.github.nicklib.utils.Translate
-import io.github.idknicks.warp.Plugin.Companion.config
-import io.github.idknicks.warp.Plugin.Companion.prefix
-import io.github.idknicks.warp.data.WarpData
+import net.starly.warp.WarpMain.Companion.config
+import net.starly.warp.WarpMain.Companion.prefix
+import net.starly.warp.data.WarpData
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
-import io.github.idknicks.warp.Plugin.Companion.instance
+import net.starly.warp.WarpMain.Companion.instance
+import net.starly.warp.extension.Translate
+import net.starly.core.data.Config
 
 class WarpCmd : CommandExecutor {
 

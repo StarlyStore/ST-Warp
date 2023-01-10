@@ -1,7 +1,7 @@
-package io.github.idknicks.warp.command
+package net.starly.warp.command
 
-import com.github.nicklib.data.Config
-import io.github.idknicks.warp.Plugin.Companion.instance
+import net.starly.warp.WarpMain.Companion.instance
+import net.starly.core.data.Config
 import org.bukkit.command.Command
 import org.bukkit.command.CommandSender
 import org.bukkit.command.TabCompleter
@@ -19,9 +19,9 @@ class WarpTabComplete : TabCompleter {
         else if(args.size == 2) {
             if (args[0].equals("이동") || args[0].equals("제거")) {
                 val config: Config = Config("warp/", instance)
-                for (warp: String in config.fileListName()) {
-                    list.add(warp)
-                }
+//                for (warp: String in config.fileListName()) {
+//                    list.add(warp)
+//                }
             } else if(args[0].equals("강제이동")) {
                 for (player in instance!!.server.onlinePlayers) {
                     list.add(player.name)
@@ -34,9 +34,9 @@ class WarpTabComplete : TabCompleter {
         } else if(args.size == 3) {
             if(args[0].equals("강제이동")) {
                 val config: Config = Config("warp/", instance)
-                for (warp: String in config.fileListName()) {
-                    list.add(warp)
-                }
+//                for (warp: String in config.fileListName()) {
+//                    list.add(warp)
+//                }
             }
         }
         return list

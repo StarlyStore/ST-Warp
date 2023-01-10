@@ -1,9 +1,9 @@
-package io.github.idknicks.warp.command
+package net.starly.warp.command
 
-import io.github.idknicks.warp.Plugin
-import io.github.idknicks.warp.Plugin.Companion.config
-import io.github.idknicks.warp.Plugin.Companion.prefix
-import io.github.idknicks.warp.data.WarpData
+import net.starly.warp.WarpMain
+import net.starly.warp.WarpMain.Companion.config
+import net.starly.warp.WarpMain.Companion.prefix
+import net.starly.warp.data.WarpData
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
@@ -51,7 +51,7 @@ class SetSpawnCmd : CommandExecutor {
             if(args.isEmpty()) {
 
                 if(!player.hasPermission("warp.setspawn")) {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${Plugin.prefix}".plus(Plugin.config!!.getString("errMessages.noPermission"))))
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${WarpMain.prefix}".plus(WarpMain.config!!.getString("errMessages.noPermission"))))
                     return true
                 }
 

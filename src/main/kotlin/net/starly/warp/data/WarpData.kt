@@ -1,7 +1,7 @@
-package io.github.idknicks.warp.data
+package net.starly.warp.data
 
-import com.github.nicklib.data.Config
-import io.github.idknicks.warp.Plugin.Companion.instance
+import net.starly.warp.WarpMain.Companion.instance
+import net.starly.core.data.Config
 import org.bukkit.Location
 import org.bukkit.entity.Player
 
@@ -16,7 +16,7 @@ class WarpData(player: Player) {
      * @param name 생성할 워프의 이름
      */
     fun createWarp(name: String) {
-        Config("warp/" + name, instance).saveLocation(name, player.location)
+        Config("warp/" + name, instance).setLocation(name, player.location)
     }
 
     /**
@@ -24,7 +24,7 @@ class WarpData(player: Player) {
      * @param name 제거할 워프의 이름
      */
     fun deleteWarp(name: String) {
-        Config("warp/" + name, instance).deleteFile()
+        Config("warp/" + name, instance).delete()
     }
 
     /**
@@ -32,7 +32,8 @@ class WarpData(player: Player) {
      * @return 존재하는 워프의 이름
      */
     fun listWarp(): List<String> {
-        return Config("warp/", instance).fileListName()
+//        return Config("warp/", instance).fileListName()
+        return List<String>(0) { "" }
     }
 
     /**
@@ -47,7 +48,7 @@ class WarpData(player: Player) {
      * 스폰을 설정합니다.
      */
     fun setSpawnLocation() {
-        Config("spawn", instance).saveLocation("spawn", player.location)
+        Config("spawn", instance).setLocation("spawn", player.location)
     }
 
     /**

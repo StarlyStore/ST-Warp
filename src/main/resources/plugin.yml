@@ -1,11 +1,12 @@
-name: Warp
-main: io.github.idknicks.warp.Plugin
-author: idkNicks
+name: ST-Warp
+main: net.starly.warp.WarpMain
+author: Starly Team
+website: https://discord.gg/TF8jqSJjCG
 
 version: 1.0.0
-api-version: 1.13
+api-version: 1.16
 
-softdepend: [ NickLib ]
+softdepend: [ ST-Core ]
 
 commands:
   warp:
