@@ -15,10 +15,10 @@
 <hr>
 
 ## ⚙️ 개발 환경 ⚙️
-- 💡 의존성 : NickLib
+- 💡 의존성 : ST-Core
 - 📡 개발 언어: 코틀린 (Kotlin)
 - 🧭 SPIGOT 1.19.2
-- 📩 버그 문의: 대영#1234
+- 📩 버그 문의: https://discord.gg/7eV6KxPdcQ
 <hr>
 
 
