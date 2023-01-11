@@ -3,9 +3,10 @@ package net.starly.warp
 import net.starly.warp.command.SetSpawnCmd
 import net.starly.warp.command.SpawnCmd
 import net.starly.warp.command.WarpCmd
-import net.starly.warp.command.WarpTabComplete
+import net.starly.warp.command.tabcomplete.WarpTabComplete
 import net.starly.core.bstats.Metrics
 import net.starly.core.data.Config
+import net.starly.warp.command.tabcomplete.SpawnTabComplete
 import org.bukkit.Bukkit
 import org.bukkit.plugin.java.JavaPlugin
 import java.util.logging.Logger
@@ -38,7 +39,9 @@ class WarpMain : JavaPlugin() {
         getCommand("warp")?.setExecutor(WarpCmd())
         getCommand("warp")?.tabCompleter = WarpTabComplete()
         getCommand("spawn")?.setExecutor(SpawnCmd())
+        getCommand("spawn")?.tabCompleter = SpawnTabComplete()
         getCommand("setspawn")?.setExecutor(SetSpawnCmd())
+        getCommand("setspawn")?.tabCompleter = SpawnTabComplete()
 
         /** CONFIG */
         instance = this

@@ -1,4 +1,4 @@
-package net.starly.warp.command
+package net.starly.warp.command.tabcomplete
 
 import net.starly.warp.WarpMain.Companion.instance
 import net.starly.core.data.Config
@@ -16,7 +16,6 @@ class WarpTabComplete : TabCompleter {
         label: String,
         args: Array<out String>
     ): MutableList<String> {
-
         var list: MutableList<String> = mutableListOf()
         var player: Player = sender as Player
 
