@@ -10,7 +10,7 @@ import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
 
-class SpawnCmd: CommandExecutor {
+class SpawnCmd : CommandExecutor {
 
     override fun onCommand(sender: CommandSender, cmd: Command, label: String, args: Array<out String>): Boolean {
 
@@ -19,20 +19,35 @@ class SpawnCmd: CommandExecutor {
 
         if (sender !is Player) return true
 
-            if(args.isEmpty()) {
+        if (args.isEmpty()) {
 
-                if(!player.hasPermission("warp.spawn")) {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.noPermission"))))
-                    return true
-                }
+            if (!player.hasPermission("warp.spawn")) {
+                player.sendMessage(
+                    ChatColor.translateAlternateColorCodes(
+                        '&',
+                        "${prefix}".plus(config!!.getString("errMessages.noPermission"))
+                    )
+                )
+                return true
+            }
 
-                if(!warpData.isSpawnExist()) {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.notSetSpawn"))))
-                    return true
-                }
+            if (!warpData.isSpawnExist()) {
+                player.sendMessage(
+                    ChatColor.translateAlternateColorCodes(
+                        '&',
+                        "${prefix}".plus(config!!.getString("errMessages.notSetSpawn"))
+                    )
+                )
+                return true
+            }
 
-                warpData.getSpawnLocation()?.let { player.teleport(it) }
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("messages.spawn.teleport"))))
+            warpData.getSpawnLocation()?.let { player.teleport(it) }
+            player.sendMessage(
+                ChatColor.translateAlternateColorCodes(
+                    '&',
+                    "${prefix}".plus(config!!.getString("messages.spawn.teleport"))
+                )
+            )
 
         }
         return false;
@@ -47,16 +62,26 @@ class SetSpawnCmd : CommandExecutor {
 
         if (sender !is Player) return true
 
-            if(args.isEmpty()) {
+        if (args.isEmpty()) {
 
-                if(!player.hasPermission("warp.setspawn")) {
-                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${WarpMain.prefix}".plus(WarpMain.config!!.getString("errMessages.noPermission"))))
-                    return true
-                }
-
-                warpData.setSpawnLocation()
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("messages.spawn.set"))))
+            if (!player.hasPermission("warp.setspawn")) {
+                player.sendMessage(
+                    ChatColor.translateAlternateColorCodes(
+                        '&',
+                        "${WarpMain.prefix}".plus(WarpMain.config!!.getString("errMessages.noPermission"))
+                    )
+                )
+                return true
             }
+
+            warpData.setSpawnLocation()
+            player.sendMessage(
+                ChatColor.translateAlternateColorCodes(
+                    '&',
+                    "${prefix}".plus(config!!.getString("messages.spawn.set"))
+                )
+            )
+        }
         return false;
     }
 }

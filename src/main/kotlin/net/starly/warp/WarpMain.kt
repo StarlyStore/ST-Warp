@@ -47,6 +47,6 @@ class WarpMain : JavaPlugin() {
         prefix = Config("config", this).config.getString("prefix")
 
         /** METRICS */
-        Metrics(this, 12345)
+        Metrics(this, 17360)
     }
 }
