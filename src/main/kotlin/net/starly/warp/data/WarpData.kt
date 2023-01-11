@@ -29,8 +29,7 @@ class WarpData(private var player: Player) {
      * @return 존재하는 워프의 이름
      */
     fun listWarp(): List<String> {
-//        return Config("warp/", instance).fileListName()
-        return List<String>(0) { "" }
+        return Config("warp/", instance).fileNames
     }
 
     /**

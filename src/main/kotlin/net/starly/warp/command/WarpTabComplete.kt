@@ -32,7 +32,7 @@ class WarpTabComplete : TabCompleter {
 
             if (args[0].equals("이동")) {
                 val config: Config = Config("warp/", instance)
-                for (warp: String in config.fileListName()) {
+                for (warp: String in config.fileNames) {
                     list.add(warp)
                 }
             }
@@ -40,7 +40,7 @@ class WarpTabComplete : TabCompleter {
             if (player.isOp) {
                 if (args[0].equals("제거")) {
                     val config: Config = Config("warp/", instance)
-                    for (warp: String in config.fileListName()) {
+                    for (warp: String in config.fileNames) {
                         list.add(warp)
                     }
 
@@ -60,7 +60,7 @@ class WarpTabComplete : TabCompleter {
             if (player.isOp) {
                 if (args[0].equals("강제이동")) {
                     val config: Config = Config("warp/", instance)
-                    for (warp: String in config.fileListName()) {
+                    for (warp: String in config.fileNames) {
                         list.add(warp)
                     }
                 }

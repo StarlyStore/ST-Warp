@@ -27,7 +27,7 @@ class WarpMain : JavaPlugin() {
     private fun init() {
 
         /** DEPENDENCY */
-        if(Bukkit.getPluginManager().getPlugin("ST-Core") == null) {
+        if (Bukkit.getPluginManager().getPlugin("ST-Core") == null) {
             log.warning("[" + instance!!.name + "] ST-Core 플러그인이 적용되지 않았습니다! 플러그인을 비활성화합니다.");
             log.warning("[" + instance!!.name + "] 다운로드 링크 : §fhttps://discord.gg/TF8jqSJjCG");
             Bukkit.getPluginManager().disablePlugin(this);

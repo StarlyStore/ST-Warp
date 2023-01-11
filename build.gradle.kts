@@ -18,7 +18,7 @@ repositories {
 dependencies {
 
     /** CORE */
-    compileOnly("net.starly.core:ST-Core:1.4.5")
+    compileOnly("net.starly.core:ST-Core:1.5")
 
     /** BUKKIT API */
     compileOnly("org.spigotmc:spigot-api:R0.1:1.16.5")
