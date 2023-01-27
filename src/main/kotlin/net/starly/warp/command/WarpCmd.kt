@@ -34,7 +34,7 @@ class WarpCmd : CommandExecutor {
 
                 "이동", "teleport", "tp" -> {
 
-                    if (!player.hasPermission("warp.teleport")) {
+                    if (!player.hasPermission("starly.warp.teleport.self")) {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.noPermission"))))
                         return true
                     }
@@ -54,9 +54,9 @@ class WarpCmd : CommandExecutor {
                     player.sendMessage(ChatColor.translateAlternateColorCodes('&', "$prefix".plus(config!!.getString("messages.warp.teleport").replace("{name}", name))))
                 }
 
-                "강제이동", "forceteleport", "forcedteleport" -> {
+                "강제이동", "forceteleport", "other" -> {
 
-                    if (!player.hasPermission("warp.forcedteleport")) {
+                    if (!player.hasPermission("starly.warp.teleport.other")) {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.noPermission"))))
                         return true
                     }
@@ -93,7 +93,7 @@ class WarpCmd : CommandExecutor {
 
                 "생성", "create" -> {
 
-                    if (!player.hasPermission("warp.create")) {
+                    if (!player.hasPermission("starly.warp.create")) {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.noPermission"))))
                         return true;
                     }
@@ -115,11 +115,11 @@ class WarpCmd : CommandExecutor {
                     return true;
                 }
 
-                "제거", "삭제", "delete" -> {
+                "제거", "삭제", "remove" -> {
 
                     var name: String = args[1]
 
-                    if (!player.hasPermission("warp.delete")) {
+                    if (!player.hasPermission("starly.warp.remove")) {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.noPermission"))))
                         return true;
                     }
@@ -159,7 +159,7 @@ class WarpCmd : CommandExecutor {
 
                 "리로드", "reload" -> {
 
-                    if(!player.hasPermission("warp.reload")) {
+                    if(!player.hasPermission("starly.warp.reload")) {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.noPermission"))))
                         return true;
                     }

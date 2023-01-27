@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "io.github.idknicks.warp"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -18,7 +18,7 @@ repositories {
 dependencies {
 
     /** CORE */
-    compileOnly("net.starly.core:ST-Core:1.5")
+    compileOnly("net.starly.core:ST-Core:1.5.5")
 
     /** BUKKIT API */
     compileOnly("org.spigotmc:spigot-api:R0.1:1.16.5")
