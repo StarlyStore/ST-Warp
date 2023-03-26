@@ -143,7 +143,7 @@ class WarpCmd : CommandExecutor {
 
                 "목록", "list" -> {
 
-                    if (!player.hasPermission("warp.list")) {
+                    if (!player.hasPermission("starly.warp.list")) {
                         player.sendMessage(ChatColor.translateAlternateColorCodes('&', "${prefix}".plus(config!!.getString("errMessages.noPermission"))))
                         return true;
                     }

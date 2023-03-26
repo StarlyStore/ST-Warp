@@ -70,7 +70,7 @@ tasks.withType<com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar> {
         copy {
             val sep = File.separator
             from("${buildDir.absolutePath}${sep}libs$sep${project.name}.jar")
-            into("C:\\Users\\Yangd\\대영\\마인크래프트\\서버\\마인크래프트\\개발용\\스탈리\\plugins")
+            into("C:\\Users\\PC\\daeyeong\\minecraft\\1.19.4 [Purpur]\\plugins")
         }
     }
 }

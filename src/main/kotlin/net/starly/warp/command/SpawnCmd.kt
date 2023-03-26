@@ -8,7 +8,6 @@ import org.bukkit.ChatColor
 import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
-import org.bukkit.command.TabCompleter
 import org.bukkit.entity.Player
 
 class SpawnCmd : CommandExecutor {
@@ -22,7 +21,7 @@ class SpawnCmd : CommandExecutor {
 
         if (args.isEmpty()) {
 
-            if (!player.hasPermission("warp.spawn")) {
+            if (!player.hasPermission("starly.warp.spawn")) {
                 player.sendMessage(
                     ChatColor.translateAlternateColorCodes(
                         '&',
@@ -65,7 +64,7 @@ class SetSpawnCmd : CommandExecutor {
 
         if (args.isEmpty()) {
 
-            if (!player.hasPermission("warp.setspawn")) {
+            if (!player.hasPermission("starly.warp.setspawn")) {
                 player.sendMessage(
                     ChatColor.translateAlternateColorCodes(
                         '&',

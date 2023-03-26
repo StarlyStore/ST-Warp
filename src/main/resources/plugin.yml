@@ -8,6 +8,33 @@ api-version: 1.16
 
 softdepend: [ ST-Core ]
 
+permissions:
+  starly.warp.teleport.self:
+    description: 워프 이동 셀프
+    default: true
+  starly.warp.teleport.other:
+    description: 워프 이동 타켓
+    default: op
+  starly.warp.create:
+    description: 워프 생성
+    default: op
+  starly.warp.remove:
+    description: 워프 삭제
+    default: op
+  starly.warp.list:
+    description: 워프 목록
+    default: op
+  starly.warp.reload:
+    description: 워프 리로드
+    default: op
+  starly.warp.spawn:
+    description: 스폰 이동
+    default: true
+  starly.warp.setspawn:
+    description: 스폰 설정
+    default: op
+
+
 commands:
   warp:
     aliases: [ 워프 ]
